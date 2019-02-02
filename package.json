@@ -1,0 +1,24 @@
+{
+  "name": "parkingsensor",
+  "version": "1.0.0",
+  "description": "Park 'N' Pay's backend communicating with the arduinos sensors and hosting it online.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "johnny-five": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulelahrizan/parkingsensor.git"
+  },
+  "author": "Abu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulelahrizan/parkingsensor/issues"
+  },
+  "homepage": "https://github.com/abdulelahrizan/parkingsensor#readme"
+}
