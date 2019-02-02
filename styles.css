@@ -7,6 +7,10 @@
     font-family: 'Oswald';
 }
 
+.cWidth{
+    width: 75%;
+}
+
 #header{
     color:white;
     font-family: 'Oswald';
@@ -26,4 +30,10 @@ body{
 
 .hText{
     font-weight: 600;
+}
+
+hr{
+    width: 50%;
+    align-self: center;
+    
 }
