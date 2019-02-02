@@ -1,4 +1,20 @@
 #navColor{
     background-color: red;
+}
 
+#subHeader{
+    color: red;
+    font-family: 'Oswald';
+    font-weight: 400;
+}
+
+.header{
+    color: red;
+    font-family: 'Oswald';
+    font-weight: 700;
+    background: url("imgs/space.jpg");
+}
+
+.cardInfo{
+    margin-bottom: .75rem;
 }

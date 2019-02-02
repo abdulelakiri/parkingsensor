@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
     
 </head>
@@ -18,50 +19,61 @@
                 </div>
             </nav>
         
-            <section id="header" class="jumbotron text-center">
+            <section class="jumbotron text-center header">
                 <h1 class="display-3">Park 'N' Pay</h1>
-                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, pariatur?</p>
-                <a href="" class="btn btn-primary">Do Something</a>
-                <a href="" class="btn btn-success">Another Thing</a>
+                <p class="lead" id="subHeader">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, pariatur?</p>
+                <a href="" class="btn btn-warning">Offer a Space</a>
+                <a href="" class="btn btn-success">Park Now</a>
             </section>
         
             <section id="gallery">
                <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 mb-4">
+                        <div class="col-lg-6 mb-4">
                             <div class="card">
-                                <img class="card-img-top" src="imgs/pattern1.jpeg" alt="">
+                                <!-- <img class="card-img-top" src="imgs/pattern1.jpeg" alt=""> -->
                                 <div class="card-body">
-                                    <h5 class="card-title">First Thing</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corrupti quam magnam!
-                                        Veniam, dolorum facere?
-                                        Commodi, ut. Et, itaque quam!</p>
-                                    <a href="" class="btn btn-outline-success btn-sm">Download</a>
+                                    <h4 class="card-title">Parking Space Information</h4>
+                                        <div class="cardInfo">
+                                            <div class="row d-flex justify-content-start">
+                                                    <div class="col-4 text-center">Owner: </div>
+                                                    <div class="col-8">*Name*</div>                                           
+                                            </div>
+                                            <div class="row d-flex justify-content-start">
+                                                    <div class="col-4 text-center">Rate: </div>
+                                                    <div class="col-8">*Price*</div>
+                                            </div>
+                                            <div class="row d-flex justify-content-start">
+                                                    <div class="col-4 text-center">Availability: </div>
+                                                    <div class="col-8">*Available/Unavailable*</div>  
+                                            </div>
+                                        </div>
+                                    
+                                    <a href="" class="btn btn-outline-success btn-sm">Park Here</a>
                                     <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 mb-4">
+                        <div class="col-lg-6 mb-4">
                             <div class="card">
-                                <img class="card-img-top" src="imgs/pattern2.jpeg" alt="">
+                                <!-- <img class="card-img-top" src="imgs/pattern2.jpeg" alt=""> -->
                                 <div class="card-body">
-                                    <h5 class="card-title">First Thing</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corrupti quam magnam!
-                                        Veniam, dolorum facere?
-                                        Commodi, ut. Et, itaque quam!</p>
-                                    <a href="" class="btn btn-outline-success btn-sm">Download</a>
-                                    <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <img class="card-img-top" src="imgs/pattern3.jpeg" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title">First Thing</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corrupti quam magnam!
-                                        Veniam, dolorum facere?
-                                        Commodi, ut. Et, itaque quam!</p>
+                                    <h4 class="card-title">Current Stats</h4>
+                                        <div class="cardInfo">
+                                            <div class="row d-flex justify-content-start">
+                                                    <div class="col-4 text-center">User: </div>
+                                                    <div class="col-8">*Name*</div>                                           
+                                            </div>
+                                            <div class="row d-flex justify-content-start">
+                                                    <div class="col-4 text-center">Cost: </div>
+                                                    <div class="col-8">*Price*</div>
+                                            </div>
+                                            <div class="row d-flex justify-content-start">
+                                                    <div class="col-4 text-center">Time: </div>
+                                                    <div class="col-8">*##:##*</div>  
+                                            </div>
+                                        </div>
+                                    
                                     <a href="" class="btn btn-outline-success btn-sm">Download</a>
                                     <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
                                 </div>
