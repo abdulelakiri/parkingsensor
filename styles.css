@@ -1,20 +1,29 @@
 #navColor{
-    background-color: red;
+    background-color: #34ad52;
 }
 
 #subHeader{
-    color: red;
+    color: white;
     font-family: 'Oswald';
-    font-weight: 400;
 }
 
-.header{
-    color: red;
+#header{
+    color:white;
     font-family: 'Oswald';
     font-weight: 700;
-    background: url("imgs/space.jpg");
-}
+    /* background: url("imgs/space.jpg"); */
+    /* background-position: center;
+    background-size: cover; */
+} 
 
 .cardInfo{
     margin-bottom: .75rem;
+}
+body{
+    background-color: #74f795;
+    padding-top: 56px;
+}
+
+.hText{
+    font-weight: 600;
 }

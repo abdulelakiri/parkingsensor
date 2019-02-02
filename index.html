@@ -13,18 +13,41 @@
 </head>
 <body>
 
-        <nav class="navbar navbar-dark" id="navColor">
-                <div class="container">
+        <nav class="navbar navbar-dark navbar-expand-md fixed-top" id="navColor">
+                <div class="container-fluid">
                     <a href="" class="navbar-brand"><i class="fas fa-car-side mr-2"></i>Park 'N' Pay</a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="button toggle">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navLinks">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">First</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Second</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Third</a>
+                            </li>
+                        </ul>
+                    </div>
+                               
                 </div>
-            </nav>
+         </nav>
         
-            <section class="jumbotron text-center header">
-                <h1 class="display-3">Park 'N' Pay</h1>
-                <p class="lead" id="subHeader">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, pariatur?</p>
-                <a href="" class="btn btn-warning">Offer a Space</a>
-                <a href="" class="btn btn-success">Park Now</a>
-            </section>
+        <section class="jumbotron text-center">
+            <div class="bg-light col-3-lg">
+                <h1 class="display-2" >Park 'N' Pay</h1>
+                <blockquote class="blockquote">
+                        <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                </blockquote>
+            </div>
+            <div class="row justify-content-center">  
+                <a href="" class="btn btn-warning btn-block col-3">Offer a Space</a>
+                <a href="" class="btn btn-success col-3">Park Now</a>
+            </div>
+        </section>
         
             <section id="gallery">
                <div class="container">
@@ -36,15 +59,15 @@
                                     <h4 class="card-title">Parking Space Information</h4>
                                         <div class="cardInfo">
                                             <div class="row d-flex justify-content-start">
-                                                    <div class="col-4 text-center">Owner: </div>
+                                                    <div class="col-4 text-center hText">Owner: </div>
                                                     <div class="col-8">*Name*</div>                                           
                                             </div>
                                             <div class="row d-flex justify-content-start">
-                                                    <div class="col-4 text-center">Rate: </div>
+                                                    <div class="col-4 text-center hText">Rate: </div>
                                                     <div class="col-8">*Price*</div>
                                             </div>
                                             <div class="row d-flex justify-content-start">
-                                                    <div class="col-4 text-center">Availability: </div>
+                                                    <div class="col-4 text-center hText">Availability: </div>
                                                     <div class="col-8">*Available/Unavailable*</div>  
                                             </div>
                                         </div>
@@ -61,15 +84,15 @@
                                     <h4 class="card-title">Current Stats</h4>
                                         <div class="cardInfo">
                                             <div class="row d-flex justify-content-start">
-                                                    <div class="col-4 text-center">User: </div>
+                                                    <div class="col-4 text-center hText">User: </div>
                                                     <div class="col-8">*Name*</div>                                           
                                             </div>
                                             <div class="row d-flex justify-content-start">
-                                                    <div class="col-4 text-center">Cost: </div>
+                                                    <div class="col-4 text-center hText">Cost: </div>
                                                     <div class="col-8">*Price*</div>
                                             </div>
                                             <div class="row d-flex justify-content-start">
-                                                    <div class="col-4 text-center">Time: </div>
+                                                    <div class="col-4 text-center hText">Time: </div>
                                                     <div class="col-8">*##:##*</div>  
                                             </div>
                                         </div>
@@ -88,6 +111,5 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
 </body>
 </html>
