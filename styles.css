@@ -25,6 +25,10 @@
     background-size: cover; */
 } 
 
+.whiteButton{
+    color:white;
+}
+
 .cardMargin{
     margin-bottom: .75rem;
 }
