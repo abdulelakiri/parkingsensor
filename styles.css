@@ -16,6 +16,10 @@
     margin-bottom: 0;
 }
 
+#divCenter{
+    margin-left: 25%;
+}
+
 #header{
     color:white;
     font-family: 'Oswald';
