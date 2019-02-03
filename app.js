@@ -55,7 +55,9 @@ function initMap() {
          // Browser doesn't support Geolocation
          handleLocationError(false, infoWindow, map.getCenter());
      }
- 
+     
+     //Parking icon image
+     var parkImage = 'imgs/parkicon.png';
     
     // map.setCenter(markerLocation);
 
@@ -70,7 +72,8 @@ function initMap() {
                     var markerLocation = {lat: owner[1].location[0], lng: owner[1].location[1]};
                     let marker = new google.maps.Marker({
                         position: markerLocation,
-                        map: map
+                        map: map, 
+                        icon: parkImage
                     })
 
                     marker.addListener("click",function(){
