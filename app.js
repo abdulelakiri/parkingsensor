@@ -10,7 +10,6 @@ function setMapOnAll(map) {
 function clearMarkers() {
   setMapOnAll(null);
 }
-
 function showMarkers() {
   setMapOnAll(map)
 }
@@ -49,14 +48,15 @@ function initMap() {
     }
   }
 
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-  infoWindow.open(map);
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+                          'Error: The Geolocation service failed.' :
+                          'Error: Your browser doesn\'t support geolocation.');
+    infoWindow.open(map);
+  }
 
-    //End of geolocation things
+  //End of geolocation things
   
     function update() {
       
@@ -74,11 +74,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                     document.getElementById("name").innerHTML=owner[0];
                     document.getElementById("price").innerHTML=owner[1].rate;
                     document.getElementById("taken").innerHTML=owner[1].taken;
-                      }
+              
                 // });
-                addMarker(owner[0], marker);
-              }
-              else {
+                //addMarker(owner[0], marker);
+              } else {
                     document.getElementById("name").innerHTML=owner[0];
                     document.getElementById("price").innerHTML=owner[1].rate;
                     document.getElementById("taken").innerHTML=owner[1].taken;
@@ -92,4 +91,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     window.setInterval(update, 3000);
 
     
-  }
+  //}
