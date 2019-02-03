@@ -1,9 +1,18 @@
-window.addEventListener("wheel", function(e) {
-    if(e.deltaY < 30){
-        $('.navbar').fadeIn(250);
-    }
-    if(e.deltaY > 0 ){
+// window.addEventListener("wheel", function(e) {
+//     if(e.deltaY < 30){
+//         $('.navbar').fadeIn(250);
+//     }
+//     if(e.deltaY > 0 ){
+//         $('.navbar').fadeOut(250);
+//     }
+// },false);
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 56) {
         $('.navbar').fadeOut(250);
+    }
+    else {
+        $('.navbar').show();
     }
 },false);
 
