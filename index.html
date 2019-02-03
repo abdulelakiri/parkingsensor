@@ -16,192 +16,189 @@
 </head>
 
 <body>
-        
-        <nav class="navbar navbar-dark navbar-expand-md fixed-top" id="navColor">
-                <div class="container">
-                    <div class="col-6 text-center justify-self-center" id="divCenter">
-                        <a href="" class="navbar-brand text-center"><i class="fas fa-car-side mr-1"></i>Park 'N' Go</a>
-                    </div>
-                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="button toggle">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse col-3 justify-content-end" id="navLinks">		      
-                        <ul class="nav">
-                          <li class="mx-2"><a href="" class="disabled whiteButton"><i class="fas fa-user mr-1"></i>Login</a></li>
-                          <li class="mx-2"><a href="" class="disabled whiteButton"><i class="fas fa-user-plus mr-1"></i>Sign Up</a></li>
-                          
-                        </ul>
-                    </div>
-                               
-                </div>
-         </nav>
 
-         <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="signUpForm">
-                                <div class="form-group">
-                                    <label for="username">Username</label>
-                                    <input type="text" class="form-control" name="username" id="usernameInput" placeholder="JustinTrudeau">
-                                </div>
-                                <div class="form-group">
-                                    <label for="address">Address</label>
-                                    <input type="text" class="form-control" name="address" id="addressInput" placeholder="24 Sussex Drive">
-                                </div>
-                                <div class="form-group">
-                                    <label for="rate">Rate ($/hr)</label>
-                                    <input type="number" class="form-control" name="rate" id="rateInput" placeholder="3">
-                                </div>
-                                <button type="submit" class="btn btn-primary" form="signUpForm">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top" id="navColor">
+        <div class="container">
+            <div class="col-6 text-center justify-self-center" id="divCenter">
+                <a href="" class="navbar-brand text-center"><i class="fas fa-car-side mr-1"></i>Park 'N' Go</a>
             </div>
-        
-        
-        <section class="jumbotron text-center" id="jumboMargin">
-            <div class="row">
-                <h1 class="display-2 col-12" >Park 'N' Go</h1>
-                <blockquote class="blockquote col-12 mb-0">
-                        <p class="mb-0">A seamless and affordable way to find and temporarily rent parking spaces.</p>
-                </blockquote>
-            </div>
-            <hr class="align-self-center">
-            <div class="row justify-content-center align-items-center">  
-                <a href="" class="btn btn-warning whiteButton mx-1 mx-md-2 mx-lg-4 col-3">Sell Space</a>
-                <a href="#spacer" class="btn btn-success mx-1 mx-md-2 mx-lg-4 col-3 navDisable">Park Now</a>
-            </div>
-        </section>
-        
-        <section class="container">
-            <div class="pleaseWork" id="spacer"></div>
-            <div id="map">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="button toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse col-3 justify-content-end" id="navLinks">
+                <ul class="nav">
+                    <li class="mx-2"><a href="" class="disabled whiteButton"><i class="fas fa-user mr-1"></i>Login</a></li>
+                    <li class="mx-2"><a href="" class="disabled whiteButton"><i class="fas fa-user-plus mr-1"></i>Sign
+                            Up</a></li>
 
-    <section class="container">
-
-        <div id="map">
+                </ul>
+            </div>
 
         </div>
+    </nav>
 
-        <div class="row justify-content-center mb-4">
-            <div class="col-lg-5" id="spotInfo">
-                <div class="card  mb-2">
-                    <!-- <img class="card-img-top" src="imgs/pattern1.jpeg" alt=""> -->
-                    <div class="card-body">
-                        <h4 class="card-title text-center">Parking Space Information</h4>
-                        <div class="cardMargin">
-                            <div class="row d-flex justify-content-start">
-                                <div class="col-6 text-right hText">Owner: </div>
-                                <div class="col-6 " id="name">*Name*</div>
-                            </div>
-                            <div class="row d-flex justify-content-start">
-                                <div class="col-6  text-right hText">Rate: </div>
-                                <div class="col-6 " id="price">*Price*</div>
-                            </div>
-                            <div class="row d-flex justify-content-start">
-                                <div class="col-6  text-right hText">Availability: </div>
-                                <div class="col-6 " id="taken">*True/False*</div>
-                            </div>
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="signUpForm">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" name="username" id="usernameInput" placeholder="JustinTrudeau">
                         </div>
-                        <div class="row justify-content-center">
-                            <a href="" class="btn btn-success col-4 mx-2">Park Here</a>
-                            <!-- <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a> -->
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" name="address" id="addressInput" placeholder="24 Sussex Drive">
+                        </div>
+                        <div class="form-group">
+                            <label for="rate">Rate ($/hr)</label>
+                            <input type="number" class="form-control" name="rate" id="rateInput" placeholder="3">
+                        </div>
+                        <button type="submit" class="btn btn-primary" form="signUpForm">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="jumbotron text-center" id="jumboMargin">
+        <div class="row">
+            <h1 class="display-2 col-12">Park 'N' Go</h1>
+            <blockquote class="blockquote col-12 mb-0">
+                <p class="mb-0">A seamless and affordable way to find and temporarily rent parking spaces.</p>
+            </blockquote>
+        </div>
+        <hr class="align-self-center">
+        <div class="row justify-content-center align-items-center">
+            <a data-toggle="modal" data-target="#formModal" class="btn btn-warning whiteButton mx-1 mx-md-2 mx-lg-4 col-3">Sell
+                Space</a>
+            <a href="#spacer" class="btn btn-success mx-1 mx-md-2 mx-lg-4 col-3 navDisable">Park Now</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="pleaseWork" id="spacer"></div>
+
+        <section class="container">
+
+            <div id="map">
+
+            </div>
+
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-5" id="spotInfo">
+                    <div class="card  mb-2">
+                        <!-- <img class="card-img-top" src="imgs/pattern1.jpeg" alt=""> -->
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Parking Space Information</h4>
+                            <div class="cardMargin">
+                                <div class="row d-flex justify-content-start">
+                                    <div class="col-6 text-right hText">Owner: </div>
+                                    <div class="col-6 " id="name">*Name*</div>
+                                </div>
+                                <div class="row d-flex justify-content-start">
+                                    <div class="col-6  text-right hText">Rate: </div>
+                                    <div class="col-6 " id="price">*Price*</div>
+                                </div>
+                                <div class="row d-flex justify-content-start">
+                                    <div class="col-6  text-right hText">Availability: </div>
+                                    <div class="col-6 " id="taken">*True/False*</div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <a href="" class="btn btn-success col-4 mx-2">Park Here</a>
+                                <!-- <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card mb-2">
-                        <!-- <img class="card-img-top" src="imgs/pattern2.jpeg" alt=""> -->
-                        <div class="card-body">
-                            <h4 class="card-title text-center">My Stats</h4>
+                    <div class="col-lg-5">
+                        <div class="card mb-2">
+                            <!-- <img class="card-img-top" src="imgs/pattern2.jpeg" alt=""> -->
+                            <div class="card-body">
+                                <h4 class="card-title text-center">My Stats</h4>
                                 <div class="cardMargin">
                                     <div class="row d-flex justify-content-start">
-                                            <div class="col-6 text-right hText">User: </div>
-                                            <div class="col-6">*Username*</div>                                           
+                                        <div class="col-6 text-right hText">User: </div>
+                                        <div class="col-6">*Username*</div>
                                     </div>
                                     <div class="row d-flex justify-content-start">
-                                            <div class="col-6 text-right hText">Balance: </div>
-                                            <div class="col-6" id="Cost">*AccountBal*</div>
+                                        <div class="col-6 text-right hText">Balance: </div>
+                                        <div class="col-6" id="Cost">*AccountBal*</div>
                                     </div>
                                     <div class="row d-flex justify-content-start">
-                                            <div class="col-6 text-right hText">Time Parked: </div>
-                                            <div class="col-6" id="Time">*00:00*</div>  
+                                        <div class="col-6 text-right hText">Time Parked: </div>
+                                        <div class="col-6" id="Time">*00:00*</div>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
-                                        <a href="" class="btn btn-success col-4 mx-2">Button</a>
-                                        <!-- <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a> -->
-                                </div> 
+                                    <a href="" class="btn btn-success col-4 mx-2">Button</a>
+                                    <!-- <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- <div class="row">
+            <!-- <div class="row">
                 <div class="col-sm-3">
                    <button type="button" class="btn btn-primary btn-lg btn-block">Same </button>
                    <button type="button" class="btn btn-primary btn-lg btn-block">Same sized </button>
                    <button type="button" class="btn btn-primary btn-lg btn-block">Same sized button</button>
                 </div>
             </div> -->
-    </section>
+        </section>
 
-    <section class="container">
-
-        <div>
-            <p class="text-right">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo necessitatibus nobis
-                fugit impedit dolorem suscipit, architecto, dolorum neque obcaecati totam adipisci repellendus! Maxime,
-                ipsum quae sed minus possimus perferendis. Tenetur.</p>
-        </div>
-
-
-
-
-
-    </section>
+        <section class="container">
+            <div>
+                <p class="text-right">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo necessitatibus
+                    nobis
+                    fugit impedit dolorem suscipit, architecto, dolorum neque obcaecati totam adipisci repellendus!
+                    Maxime,
+                    ipsum quae sed minus possimus perferendis. Tenetur.</p>
+            </div>
+        </section>
 
 
-    <script>
-        document.querySelector('form#signUpForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            let username = document.getElementById("usernameInput").value;
-            let address = document.getElementById("addressInput").value;
-            let rate = document.getElementById("rateInput").value;
+        <script>
+            document.querySelector('form#signUpForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                let username = document.getElementById("usernameInput").value;
+                let address = document.getElementById("addressInput").value;
+                let rate = document.getElementById("rateInput").value;
 
-            fetch(
-                    `https://hurani.lib.id/parkfind@dev/signUpHost/?username=${username}&address=${encodeURIComponent(address)}&rate=${rate}`
-                )
-                .then(function (resp) {
-                    console.log(resp)
-                    // alert(resp);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+                fetch(
+                        `https://hurani.lib.id/parkfind@dev/signUpHost/?username=${username}&address=${encodeURIComponent(address)}&rate=${rate}`
+                    )
+                    .then(function (resp) {
+                        console.log(resp)
+                        // alert(resp);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
 
-            $('#formModal .close').click();
-        })
-    </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-    <script src="cssScript.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqb8RzdATmA1ucjHuPHbIItO3GzXxlFVI&callback=initMap">
-    </script>
+                $('#formModal .close').click();
+            })
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="app.js"></script>
+        <script src="cssScript.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqb8RzdATmA1ucjHuPHbIItO3GzXxlFVI&callback=initMap">
+        </script>
 </body>
 
 </html>
