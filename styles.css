@@ -20,6 +20,19 @@
     margin-left: 25%;
 }
 
+.pleaseWork{
+    /* margin-top: 10px; */
+    padding: 1px 1px;
+}
+
+.navDisable{
+
+}
+
+.signUp{
+    background-color: white;
+}
+
 #header{
     color:white;
     font-family: 'Oswald';
