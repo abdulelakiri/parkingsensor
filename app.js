@@ -29,6 +29,23 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
+        //gets rid of unecessary labels
+          styles: [
+            {
+              "featureType": "all",
+              "elementType": "labels",
+              "stylers": [
+                { "visibility": "off" }
+              ]
+            }, {
+              "featureType": "road",
+              "elementType": "labels",
+              "stylers": [
+                { "visibility": "on" }
+              ]
+            }
+          ]
+            
     });
 
     var pos;
