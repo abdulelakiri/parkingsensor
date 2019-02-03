@@ -78,9 +78,9 @@ function initMap() {
                     addMarker(username, marker);
                     console.log(markers);
                 } else if (owner[1].taken) {
-                    document.getElementById("name").innerHTML = "delete!"// username;
-                    document.getElementById("price").innerHTML = "delete!" // owner[1].rate;
-                    document.getElementById("taken").innerHTML = "delete!"// !owner[1].taken;
+                    document.getElementById("name").innerHTML = username;
+                    document.getElementById("price").innerHTML = owner[1].rate;
+                    document.getElementById("taken").innerHTML = !owner[1].taken;
                     deleteMarker(username);
                 }
             }
