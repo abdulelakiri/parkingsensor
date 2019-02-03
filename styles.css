@@ -11,6 +11,10 @@
     width: 75%;
 }
 
+#jumboMargin{
+    margin-top: 56px;
+}
+
 #header{
     color:white;
     font-family: 'Oswald';
@@ -25,7 +29,7 @@
 }
 body{
     background-color: #74f795;
-    padding-top: 56px;
+    /* padding-top: 56px; */
 }
 
 .hText{
@@ -40,11 +44,7 @@ hr{
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
  #map {
-    height: 50%;
+    height: 250px;
+    margin-bottom: 2rem;
   }
   /* Optional: Makes the sample page fill the window. */
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
