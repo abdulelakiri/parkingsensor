@@ -66,7 +66,6 @@ function initMap() {
                 let owner = data[i];
                 let username = owner[0];
                 if (!owner[1].taken && !(username in markers)) {
-                    console.log(owner[1].location)
                     var markerLocation = {lat: owner[1].location[0], lng: owner[1].location[1]};
                     let marker = new google.maps.Marker({
                         position: markerLocation,
@@ -84,7 +83,6 @@ function initMap() {
                     // });
 
                     addMarker(username, marker);
-                    console.log(markers);
                 } else if (owner[1].taken) {
                     document.getElementById("name").innerHTML = username;
                     document.getElementById("price").innerHTML = owner[1].rate;
@@ -107,3 +105,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
+function formSubmit() {
+    let username = document.getElementById("usernameInput");
+    let address = document.getElementById("addressInput");
+    let rate = document.getElementById("rateInput");
+    console.log(username+address+rate)
+    fetch(`https://hurani.lib.id/parkfind@dev/signUpHost/username=${username}&address=${address}&rate=${rate}`)
+}
