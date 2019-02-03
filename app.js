@@ -27,18 +27,9 @@ function deleteMarker(username) {
 }
 
 function initMap() {
-    var myLocation = {
-        lat: 44.227071,
-        lng: -76.493316
-    };
-    var location2 = {
-        lat: 44.227563,
-        lng: -76.497704
-    };
-
+    
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
-        center: myLocation
     });
 
     //Geolocation things
@@ -56,6 +47,14 @@ function initMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
+    //End of geolocation things
+
+        //Position Marker
+        var marker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          title: 'You are here!'
+        });
 
     function update() {
         const url = "https://hurani.lib.id/parkfind@dev/getAllSpots/";
