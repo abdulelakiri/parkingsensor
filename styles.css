@@ -16,6 +16,23 @@
     margin-bottom: 0;
 }
 
+#divCenter{
+    margin-left: 25%;
+}
+
+.pleaseWork{
+    /* margin-top: 10px; */
+    padding: 1px 1px;
+}
+
+.navDisable{
+
+}
+
+.signUp{
+    background-color: white;
+}
+
 #header{
     color:white;
     font-family: 'Oswald';
@@ -24,6 +41,10 @@
     /* background-position: center;
     background-size: cover; */
 } 
+
+.whiteButton{
+    color:white;
+}
 
 .cardMargin{
     margin-bottom: .75rem;
@@ -49,12 +70,23 @@ hr{
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
  #map{
-    height: 400px;
+    height: 500px;
     margin: 2rem auto;
-    display: block;
   }
   /* Optional: Makes the sample page fill the window. */
 
   #spotInfo{
       display: none;
+  }
+
+  #footer .closingSec{
+      font-size: 0.7rem;
+      margin-bottom: 0px;
+      padding: 2rem;
+      background-color:  #232323;
+  }
+
+  #footer{
+      margin: 0px;
+      padding: 0px;
   }
