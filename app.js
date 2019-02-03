@@ -49,13 +49,14 @@ function initMap() {
                     document.getElementById("name").innerHTML=owner[0];
                     document.getElementById("price").innerHTML=owner[1].rate;
                     document.getElementById("taken").innerHTML=owner[1].taken;
+                      }
                 // });
                 addMarker(owner[0], marker);
               }
               else {
-                document.getElementById("name").innerHTML="";
-                document.getElementById("price").innerHTML="";
-                document.getElementById("taken").innerHTML="";
+                    document.getElementById("name").innerHTML=owner[0];
+                    document.getElementById("price").innerHTML=owner[1].rate;
+                    document.getElementById("taken").innerHTML=owner[1].taken;
                 deleteMarker(owner[0]);
               }
           }
