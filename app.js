@@ -43,7 +43,7 @@ function initMap() {
            map.setCenter(pos);
 
              //Position Marker
-             var image = 'imgs/blueMarkerSmall.png';
+             var image = 'imgs/hereicon.png';
              let currentMarker = new google.maps.Marker({
               position: pos,
               map: map,
