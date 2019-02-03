@@ -12,7 +12,7 @@ function initMap() {
     //geolocation stuff
     /*
     var infoWindow = new google.maps.InfoWindow;
-     // Try HTML5 geolocation.
+     // Try HTML5 geolocatio n.
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         var pos = {
@@ -42,29 +42,23 @@ function initMap() {
   */
   
     //get markers
-    var marker1 = new google.maps.Marker({
-      position: myLocation,
-      map: map,
-      title: 'Parking Spot',
-      rate: 3, 
-      owner: 'Karim', 
-      available: true
-      
-    });
-    var marker2 = new google.maps.Marker({
-      position: {lat: 44.227563, lng: -76.497704},
-      map: map,
-      title: 'Parking Spot', 
-      rate: 2, 
-      owner: 'Adam', 
-      available: true
-    });
-    
-    marker1.addListener('click', function() {
-      document.getElementById("content").innerHTML="hello world1"; 
-    });
-    marker2.addListener('click', function() {
-      document.getElementById("content").innerHTML="hello world2"; 
-    });
-    
+    const url = "https://hurani.lib.id/parkfind@dev/getAllSpots/";
+    $.get(url, function(data, status){
+        var markers = [];
+        for (var i = 0; i < data.length; i++) {
+            owner = data[i];
+            marker = new google.maps.Marker({
+                position: myLocation,
+                map: map
+            })
+
+            marker.addListener('click', function() {
+                document.getElementById("name").innerHTML=owner[0];
+                document.getElementById("price").innerHTML=owner[1].rate;
+                document.getElementById("taken").innerHTML=owner[1].taken;
+            });
+
+            markers.push(marker);
+        }
+    })  
   }
