@@ -1,5 +1,5 @@
-var markers = {};
-var map;
+let markers = {};
+let map;
 
 function setMapOnAll(map) {
     for (let username in markers) {
@@ -27,7 +27,7 @@ function deleteMarker(username) {
 
 function initMap() {
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
         //gets rid of unecessary labels
           styles: [
@@ -79,36 +79,26 @@ function initMap() {
     // map.setCenter(markerLocation);
 
     function update() {
-        const url = "https://hurani.lib.id/parkfind@dev/getAllSpots/";
-        $.get(url, function (data, status) {
+        $.get("https://hurani.lib.id/parkfind@dev/getAllSpots/", function (data, status) {
             for (var i = 0; i < data.length; i++) {
                 let owner = data[i];
                 let username = owner[0];
                 if (!owner[1].taken && !(username in markers)) {
-                    console.log(owner[1].location)
-                    var markerLocation = {lat: owner[1].location[0], lng: owner[1].location[1]};
+                    let markerLocation = {lat: parseFloat(owner[1].location[0]), lng: parseFloat(owner[1].location[1])};
                     let marker = new google.maps.Marker({
                         position: markerLocation,
                         map: map, 
                         icon: parkImage
                     })
-
                     marker.addListener("click",function(){
-                        console.log("CLICKED");
                         $("#spotInfo").show();
                         document.getElementById("name").innerHTML = username;
                         document.getElementById("price").innerHTML = owner[1].rate;
                         document.getElementById("taken").innerHTML = !owner[1].taken;
-                    })
-                    // marker.addListener('click', function() {
-                    // });
+                    });
 
                     addMarker(username, marker);
-                    console.log(markers);
-                } else if (owner[1].taken) {
-                    document.getElementById("name").innerHTML = username;
-                    document.getElementById("price").innerHTML = owner[1].rate;
-                    document.getElementById("taken").innerHTML = !owner[1].taken;
+                } else if (owner[1].taken && username in markers) {
                     deleteMarker(username);
                 }
             }
@@ -127,3 +117,9 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
+function formSubmit() {
+    let username = document.getElementById("usernameInput");
+    let address = document.getElementById("addressInput");
+    let rate = document.getElementById("rateInput");
+    fetch(`https://hurani.lib.id/parkfind@dev/signUpHost/username=${username}&address=${address}&rate=${rate}`)
+}
