@@ -34,27 +34,30 @@ function initMap() {
 
     var pos;
     // Try HTML5 geolocation.
+     if (navigator.geolocation) {
+         navigator.geolocation.getCurrentPosition(function (position) {
+             pos = {
+                 lat: position.coords.latitude,
+                 lng: position.coords.longitude
+             };
 
-    // if (navigator.geolocation) {
-    //     navigator.geolocation.getCurrentPosition(function (position) {
-    //         pos = {
-    //             lat: position.coords.latitude,
-    //             lng: position.coords.longitude
-    //         };
+           map.setCenter(pos);
 
-            // map.setCenter(pos);
-    //     });
-    // } else {
-    //     // Browser doesn't support Geolocation
-    //     handleLocationError(false, infoWindow, map.getCenter());
-    // }
+             //Position Marker
+             var image = 'imgs/blueMarkerSmall.png';
+             let currentMarker = new google.maps.Marker({
+              position: pos,
+              map: map,
+              icon: image
+             });
+
+         });
+     } else {
+         // Browser doesn't support Geolocation
+         handleLocationError(false, infoWindow, map.getCenter());
+     }
  
-    //Position Marker
-    // var currentMarker = new google.maps.Marker({
-    //     position: pos,
-    //     map: map,
-    //     title: 'You are here!'
-    // });
+    
     map.setCenter(markerLocation);
 
     function update() {
