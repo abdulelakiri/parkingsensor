@@ -43,7 +43,7 @@ hr{
 }
 
 .text-right{
-    text-align: end
+    text-align: end;
 }
 
 /* Always set the map height explicitly to define the size of the div
