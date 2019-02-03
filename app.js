@@ -26,7 +26,6 @@ function deleteMarker(username) {
 }
 
 function initMap() {
-    var markerLocation = {lat: 44.226720, lng: -76.486880};
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
@@ -58,7 +57,7 @@ function initMap() {
      }
  
     
-    map.setCenter(markerLocation);
+    // map.setCenter(markerLocation);
 
     function update() {
         const url = "https://hurani.lib.id/parkfind@dev/getAllSpots/";
@@ -67,15 +66,21 @@ function initMap() {
                 let owner = data[i];
                 let username = owner[0];
                 if (!owner[1].taken && !(username in markers)) {
+                    console.log(owner[1].location)
+                    var markerLocation = {lat: owner[1].location[0], lng: owner[1].location[1]};
                     let marker = new google.maps.Marker({
                         position: markerLocation,
                         map: map
                     })
 
+                    marker.addListener("click",function(){
+                        console.log("CLICKED");
+                        $("#spotInfo").show();
+                        document.getElementById("name").innerHTML = username;
+                        document.getElementById("price").innerHTML = owner[1].rate;
+                        document.getElementById("taken").innerHTML = !owner[1].taken;
+                    })
                     // marker.addListener('click', function() {
-                    document.getElementById("name").innerHTML = username;
-                    document.getElementById("price").innerHTML = owner[1].rate;
-                    document.getElementById("taken").innerHTML = !owner[1].taken;
                     // });
 
                     addMarker(username, marker);
@@ -101,3 +106,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
 }
+

@@ -51,5 +51,10 @@ hr{
  #map{
     height: 400px;
     margin: 2rem auto;
+    display: block;
   }
   /* Optional: Makes the sample page fill the window. */
+
+  #spotInfo{
+      display: none;
+  }
