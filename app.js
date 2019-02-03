@@ -2,8 +2,7 @@ var markers = {};
 var map;
 
 function setMapOnAll(map) {
-    for (var username in markers) {
-        console.log(username)
+    for (let username in markers) {
         markers[username].setMap(map);
     }
 }
@@ -13,7 +12,7 @@ function clearMarkers() {
 }
 
 function showMarkers() {
-    setMapOnAll(map)
+    setMapOnAll(map);
 }
 
 function addMarker(username, marker) {
@@ -22,63 +21,67 @@ function addMarker(username, marker) {
 
 function deleteMarker(username) {
     clearMarkers();
-    delete markers[username]
+    delete markers[username];
     showMarkers();
 }
 
 function initMap() {
-    
+    var markerLocation = {lat: 44.226720, lng: -76.486880};
+
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
     });
 
-    //Geolocation things
+    var pos;
     // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
 
-            map.setCenter(pos);
-        });
-    } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-    }
-    //End of geolocation things
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(function (position) {
+    //         pos = {
+    //             lat: position.coords.latitude,
+    //             lng: position.coords.longitude
+    //         };
 
-        //Position Marker
-        var marker = new google.maps.Marker({
-          position: pos,
-          map: map,
-          title: 'You are here!'
-        });
+            // map.setCenter(pos);
+    //     });
+    // } else {
+    //     // Browser doesn't support Geolocation
+    //     handleLocationError(false, infoWindow, map.getCenter());
+    // }
+ 
+    //Position Marker
+    // var currentMarker = new google.maps.Marker({
+    //     position: pos,
+    //     map: map,
+    //     title: 'You are here!'
+    // });
+    map.setCenter(markerLocation);
 
     function update() {
         const url = "https://hurani.lib.id/parkfind@dev/getAllSpots/";
         $.get(url, function (data, status) {
             for (var i = 0; i < data.length; i++) {
-                owner = data[i];
-                if (owner[1].taken) {
-                    marker = new google.maps.Marker({
-                        position: myLocation,
+                let owner = data[i];
+                let username = owner[0];
+                if (!owner[1].taken && !(username in markers)) {
+                    let marker = new google.maps.Marker({
+                        position: markerLocation,
                         map: map
                     })
 
                     // marker.addListener('click', function() {
-                    document.getElementById("name").innerHTML = owner[0];
+                    document.getElementById("name").innerHTML = username;
                     document.getElementById("price").innerHTML = owner[1].rate;
-                    document.getElementById("taken").innerHTML = owner[1].taken;
-
+                    document.getElementById("taken").innerHTML = !owner[1].taken;
                     // });
-                    //addMarker(owner[0], marker);
-                } else {
-                    document.getElementById("name").innerHTML = owner[0];
-                    document.getElementById("price").innerHTML = owner[1].rate;
-                    document.getElementById("taken").innerHTML = owner[1].taken;
-                    deleteMarker(owner[0]);
+
+                    addMarker(username, marker);
+                    console.log(markers);
+                } else if (owner[1].taken) {
+                    document.getElementById("name").innerHTML = "delete!"// username;
+                    document.getElementById("price").innerHTML = "delete!" // owner[1].rate;
+                    document.getElementById("taken").innerHTML = "delete!"// !owner[1].taken;
+                    deleteMarker(username);
                 }
             }
         })
