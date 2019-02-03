@@ -78,3 +78,8 @@ hr{
   #spotInfo{
       display: none;
   }
+
+  #footer .closingSec{
+      margin-bottom: 0px;
+      background-color:  #232323;
+  }
