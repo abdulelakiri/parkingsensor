@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./static/style.css">
 
 </head>
 
@@ -27,9 +27,8 @@
             </button>
             <div class="collapse navbar-collapse col-3 justify-content-end" id="navLinks">
                 <ul class="nav">
-                    <li class="mx-2"><a href="" class="disabled whiteButton"><i class="fas fa-user mr-1"></i>Login</a></li>
-                    <li class="mx-2"><a href="" class="disabled whiteButton"><i class="fas fa-user-plus mr-1"></i>Sign
-                            Up</a></li>
+                    <li class="mx-2"><button data-toggle="modal" data-target="#formModal" class="btn btn-primary"><i class="fas fa-user-plus mr-1"></i>Sign
+                            Up</button></li>
 
                 </ul>
             </div>
@@ -112,13 +111,8 @@
                                     <div class="col-6 " id="taken">*True/False*</div>
                                 </div>
                             </div>
-                            <div class="row justify-content-center">
-                                <a href="" class="btn btn-success col-4 mx-2">Park Here</a>
-                                <!-- <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a> -->
-                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
                         <div class="card mb-2">
                             <!-- <img class="card-img-top" src="imgs/pattern2.jpeg" alt=""> -->
                             <div class="card-body">
@@ -126,26 +120,21 @@
                                 <div class="cardMargin">
                                     <div class="row d-flex justify-content-start">
                                         <div class="col-6 text-right hText">User: </div>
-                                        <div class="col-6">*Username*</div>
+                                        <div class="col-6" id="usernameLbl">*Username*</div>
                                     </div>
                                     <div class="row d-flex justify-content-start">
                                         <div class="col-6 text-right hText">Balance: </div>
-                                        <div class="col-6" id="Cost">*AccountBal*</div>
+                                        <div class="col-6" id="costLbl">*AccountBal*</div>
                                     </div>
                                     <div class="row d-flex justify-content-start">
                                         <div class="col-6 text-right hText">Time Parked: </div>
-                                        <div class="col-6" id="Time">*00:00*</div>
+                                        <div class="col-6" id="timeLbl">*00:00*</div>
                                     </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <a href="" class="btn btn-success col-4 mx-2">Button</a>
-                                    <!-- <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
             <!-- <div class="row">
                 <div class="col-sm-3">
@@ -154,16 +143,6 @@
                    <button type="button" class="btn btn-primary btn-lg btn-block">Same sized button</button>
                 </div>
             </div> -->
-        </section>
-
-        <section class="container">
-            <div>
-                <p class="text-right">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo necessitatibus
-                    nobis
-                    fugit impedit dolorem suscipit, architecto, dolorum neque obcaecati totam adipisci repellendus!
-                    Maxime,
-                    ipsum quae sed minus possimus perferendis. Tenetur.</p>
-            </div>
         </section>
 
 
@@ -195,8 +174,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="app.js"></script>
-        <script src="cssScript.js"></script>
+        <script src="./static/app.js"></script>
+        <!--<script src="cssScript.js"></script>-->
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqb8RzdATmA1ucjHuPHbIItO3GzXxlFVI&callback=initMap">
         </script>
 </body>

@@ -1,5 +1,7 @@
 let markers = {};
 let map;
+let trueTotalTime = 0;
+let flag = false;
 
 function setMapOnAll(map) {
     for (let username in markers) {
@@ -60,7 +62,7 @@ function initMap() {
            map.setCenter(pos);
 
              //Position Marker
-             var image = 'imgs/hereicon.png';
+             var image = 'static/images/hereicon.png';
              let currentMarker = new google.maps.Marker({
               position: pos,
               map: map,
@@ -74,7 +76,7 @@ function initMap() {
      }
      
      //Parking icon image
-     var parkImage = 'imgs/parkicon.png';
+     var parkImage = 'static/images/parkicon.png';
     
     // map.setCenter(markerLocation);
 
@@ -96,17 +98,29 @@ function initMap() {
                         document.getElementById("price").innerHTML = owner[1].rate;
                         document.getElementById("taken").innerHTML = !owner[1].taken;
                     });
+                    
+                    htmlUsername= document.getElementById("name").innerHTML;
+                    if (username == htmlUsername) {
+                      document.getElementById("taken").innerHTML = "true";
+                    }
 
                     addMarker(username, marker);
                 } else if (owner[1].taken && username in markers) {
+                    htmlUsername= document.getElementById("name").innerHTML;
+                    if (username == htmlUsername) {
+                      document.getElementById("taken").innerHTML = "unavailable";
+                    }
+                    
                     deleteMarker(username);
                 }
             }
+            flag = true;
+
         })
 
     };
     update();
-    window.setInterval(update, 3000);
+    window.setInterval(update, 1000);
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
